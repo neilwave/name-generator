@@ -1,4 +1,4 @@
-// main javascript - evrything comes all together here
+// main javascript
 
 buttonAction = () => {
     document.getElementById('card-out').style.visibility='visible';
