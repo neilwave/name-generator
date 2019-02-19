@@ -12,18 +12,15 @@ div {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
         "card card card"
-        "co-1 co-2 co-3";
+        "co-1 co-2 co-3"
+        "co-4 co-4 co-4";
 }
 .card {
     grid-area: card;
-
 }
 /* Display on/off results */
-#card-out {
+.card-output {
     visibility: hidden;
-}
-.class-output {
-    
 }
 .co-1 {
     grid-area: co-1;
@@ -33,4 +30,7 @@ div {
 }
 .co-3 {
     grid-area: co-3;
+}
+.co-4 {
+    grid-area: co-4;
 }
