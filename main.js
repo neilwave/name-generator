@@ -13,12 +13,12 @@ buttonAction = () => {
         }
         if (name === middle) {
             let randomIndex = Math.floor(Math.random() * middle.length);
-            let midN = first[randomIndex];
+            let midN = middle[randomIndex];
             return midN;
         }
         if (name === last) {
             let randomIndex = Math.floor(Math.random() * last.length);
-            let lastN = first[randomIndex];
+            let lastN = last[randomIndex];
             return lastN;
         };
 

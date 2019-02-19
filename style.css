@@ -11,9 +11,11 @@ div {
     margin: auto;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
-        "card card card"
+        ". card ."
         "co-1 co-2 co-3"
-        "co-4 co-4 co-4";
+        ". co-4 .";
+    text-align: center;
+    text-transform: uppercase;
 }
 .card {
     grid-area: card;
@@ -33,4 +35,10 @@ div {
 }
 .co-4 {
     grid-area: co-4;
+}
+.button {
+    border: 5px solid yellow;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px auto;
 }
