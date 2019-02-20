@@ -1,17 +1,22 @@
 body {
     background: #000;
     color: #fff;
+    font-family: sans-serif;
 }
 div {
-    border: 1px dashed darkolivegreen;
+    /* border: 1px dashed darkolivegreen; */
+}
+header {
+    text-align: center;
+    padding-top: 20px;
 }
 .wrapper {
     display: grid;
-    width: 50%;
+    width: 80%;
     margin: auto;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
-        ". card ."
+        "card card card"
         "co-1 co-2 co-3"
         ". co-4 .";
     text-align: center;
@@ -24,26 +29,34 @@ div {
 .card-output {
     visibility: hidden;
 }
+/* style for all columns */
+.co-1,
+.co-2,
+.co-3,
+.co-4 {
+    padding: 25px;
+    margin: 5px;
+    border-radius: 5px;
+}
 .co-1 {
     grid-area: co-1;
-    background: #000;
-
 }
 .co-2 {
     grid-area: co-2;
-    background: #cad825;
 }
 .co-3 {
     grid-area: co-3;
-    background: #ff5fe4;
 }
 .co-4 {
     grid-area: co-4;
 }
 /* Button style */
 .button {
-    border: 5px solid yellow;
+    border: 2px solid yellow;
     border-radius: 5px;
     padding: 10px;
-    margin: 10px auto;
+    margin: 50px auto;
+}
+.button:active {
+    border: 2px solid blue;
 }

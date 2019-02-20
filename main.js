@@ -2,7 +2,7 @@
 buttonAction = () => {
     // document.getElementsByClassName('card-output').style.visibility = 'visible';
 
-    // generate random Names
+    // function - generate random name
     genNames = (name) => {
 
         if (name === first) {
@@ -31,21 +31,25 @@ buttonAction = () => {
     document.getElementById('genmid').innerHTML = `<h2>${midN}</h2>`;
     document.getElementById('genlast').innerHTML = `<h2>${lastN}</h2>`;
 
-    // color shaker - ! muss noch richtige hex Zahlen auswerfen = 35b16c, am besten mit join() issue ist offen
-    myHex = () => {
-    let randomHex = [];
-    for (let i = 0; i < 6; i++) {
-        randomHex.push(color[i]);
-        console.log(randomHex);
+    // function - RGB color shaker
+    const randomRGB = [];
+    myHex = () => {     
+        for (let i = 0; i < 3; i++) {
+            let x = Math.floor(Math.random()* 255);
+            let y =+ x; 
+            randomRGB.push(y);                
+        }
+        return randomRGB
     }
-    // let randomHex = Math.floor((Math.random() * 256) + 100 );
-    return randomHex;
-    }
-    const myNewHex = myHex();
-    console.log(myNewHex);
-    // document.getElementsByClassName('co-1').style.background = `#${myNewHex}`;    
+    myHex();
+    // variable to take the string for RGB colors
+    let rgb = randomRGB.join(','); 
+    // set the RGB colors to the background
+    document.getElementById('genfirst').style.background = `rgb(${rgb})`;
+    document.getElementById('genmid').style.background = `rgb(${rgb})`;
+    document.getElementById('genlast').style.background = `rgb(${rgb})`;
+    
 } // end of button Action
-
 
 // buttonActionRev = () => {
 //     document.getElementsByClassName('card-output').style.visibility = 'hidden';
@@ -54,4 +58,3 @@ buttonAction = () => {
 const first = ['blues', 'sugar', 'pepp', 'small', 'big', 'handsome', 'thin'];
 const middle = ['Regular', 'Guitar', 'String', 'Stumpy', 'drumroll'];
 const last = ['sue', 'joe', 'bird', 'dan', 'dog', 'eagle', 'cat'];
-const color = ['0','1','2','3','4','5','6','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
