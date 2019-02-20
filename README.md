@@ -15,10 +15,8 @@ To get random names the name-generator uses the http://www.datamuse.com/api/. So
 I created this generator during my first #100DaysOfCode challenge.
 
 ## Topics in this generator
-
-- functions, 
-- random output, 
-- manipulate the DOM, 
+ 
+- random names,
+- color shaker (random colors)
 - API handling
-- CSS Grid
 
