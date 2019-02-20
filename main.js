@@ -31,7 +31,7 @@ buttonAction = () => {
     document.getElementById('genmid').innerHTML = `<h2>${midN}</h2>`;
     document.getElementById('genlast').innerHTML = `<h2>${lastN}</h2>`;
 
-    // color shaker - ! muss noch richtige hex Zahlen auswerfen = 35b16c
+    // color shaker - ! muss noch richtige hex Zahlen auswerfen = 35b16c, am besten mit join() issue ist offen
     myHex = () => {
     let randomHex = [];
     for (let i = 0; i < 6; i++) {
@@ -43,7 +43,7 @@ buttonAction = () => {
     }
     const myNewHex = myHex();
     console.log(myNewHex);
-    // document.getElementsByClassName('co-1').style.backgrpound = `#${myNewHex}`;    
+    // document.getElementsByClassName('co-1').style.background = `#${myNewHex}`;    
 } // end of button Action
 
 
