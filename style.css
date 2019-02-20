@@ -26,19 +26,24 @@ div {
 }
 .co-1 {
     grid-area: co-1;
+    background: #000;
+
 }
 .co-2 {
     grid-area: co-2;
+    background: #cad825;
 }
 .co-3 {
     grid-area: co-3;
+    background: #ff5fe4;
 }
 .co-4 {
     grid-area: co-4;
 }
+/* Button style */
 .button {
     border: 5px solid yellow;
-    border-radius: 25px;
+    border-radius: 5px;
     padding: 10px;
     margin: 10px auto;
 }
