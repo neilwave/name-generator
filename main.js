@@ -1,4 +1,5 @@
 // main javascript
+
 buttonAction = () => {
     // document.getElementsByClassName('card-output').style.visibility = 'visible';
 
@@ -33,22 +34,27 @@ buttonAction = () => {
 
     // function - RGB color shaker
     const randomRGB = [];
-    myHex = () => {     
+    myHex = () => {
         for (let i = 0; i < 3; i++) {
             let x = Math.floor(Math.random()* 255);
-            let y =+ x; 
+            let y =+ x;    
             randomRGB.push(y);                
-        }
-        return randomRGB
+            }
+        return randomRGB   
     }
-    myHex();
+   myHex();
     // variable to take the string for RGB colors
     let rgb = randomRGB.join(','); 
+
     // set the RGB colors to the background
     document.getElementById('genfirst').style.background = `rgb(${rgb})`;
     document.getElementById('genmid').style.background = `rgb(${rgb})`;
     document.getElementById('genlast').style.background = `rgb(${rgb})`;
-    
+
+
+
+
+
 } // end of button Action
 
 // buttonActionRev = () => {
@@ -58,3 +64,38 @@ buttonAction = () => {
 const first = ['blues', 'sugar', 'pepp', 'small', 'big', 'handsome', 'thin'];
 const middle = ['Regular', 'Guitar', 'String', 'Stumpy', 'drumroll'];
 const last = ['sue', 'joe', 'bird', 'dan', 'dog', 'eagle', 'cat'];
+
+// Animations
+    'use strict';
+    function init() {
+        let animation = document.getElementById('ani').animate([
+            {
+                transform: 'scale(1, 1.5)',
+                opacity: 1,
+                // offset: 0
+            },
+            {
+                transform: 'scale(1, 0.5)',
+                opacity: 0.8,
+                // offset: 0.3
+            },
+            {
+                transform: 'scale(1, 1)',
+                opacity: 0.6,
+                // offset: 0.6
+            },
+            {
+                transform: 'scale(1, 0.5)',
+                opacity: 0.7,
+                // offset: 1
+            }
+        ],{
+            duration: 100,
+            easing: 'ease-in-out',
+            delay: 10,
+            iterations: 50,
+            direction: 'alternate',
+            fill: 'both'
+        });
+    }
+    document.addEventListener('DOMContentLoaded', init);

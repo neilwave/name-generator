@@ -4,12 +4,13 @@ body {
     font-family: sans-serif;
 }
 div {
-    /* border: 1px dashed darkolivegreen; */
+    border: 1px dashed darkolivegreen;
 }
 header {
     text-align: center;
     padding-top: 20px;
-}
+}   
+/* Template */
 .wrapper {
     display: grid;
     width: 80%;
@@ -19,6 +20,7 @@ header {
         "card card card"
         "co-1 co-2 co-3"
         ". co-4 .";
+        
     text-align: center;
     text-transform: uppercase;
 }
@@ -33,7 +35,8 @@ header {
 .co-1,
 .co-2,
 .co-3,
-.co-4 {
+.co-4,
+.co-move {
     padding: 25px;
     margin: 5px;
     border-radius: 5px;
@@ -50,12 +53,28 @@ header {
 .co-4 {
     grid-area: co-4;
 }
+/* .co-move {
+    grid-area: co-move;
+    text-align: center;
+    background: darkgray;
+    position: relative;
+    animation: moveani 2s infinite;
+}
+@keyframes moveani {
+    from { top: 50px; }
+    to  { top: 200px; }
+} */
+
 /* Button style */
 .button {
     border: 2px solid yellow;
     border-radius: 5px;
     padding: 10px;
     margin: 50px auto;
+}
+.button:hover {
+    /* border: 2px solid blue; */
+    cursor: pointer;
 }
 .button:active {
     border: 2px solid blue;
