@@ -19,8 +19,7 @@ header {
     grid-template-areas: 
         "card card card"
         "co-1 co-2 co-3"
-        ". co-4 ."
-        ". co-move .";
+        ". co-4 .";
         
     text-align: center;
     text-transform: uppercase;
