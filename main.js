@@ -37,10 +37,11 @@ myFunc = () => {
 // Animations
 'use strict';
 anim = () => {
-    document.getElementById('genfirst').animate([
+    document.getElementById('anim-first').animate([
         {
-            transform: 'scale(1, 1.5)',
+            transform: 'scale(1, 1)',
             // opacity: 1.0,
+
         },
         {
             transform: 'scale(1, 0.0)',
@@ -53,7 +54,7 @@ anim = () => {
             // offset: 0.6
         },
         {
-            transform: 'scale(1, 0.5)',
+            transform: 'scale(1, 0)',
             // opacity: 0.7,
             // offset: 1
         }
@@ -65,24 +66,25 @@ anim = () => {
             direction: 'alternate',
             fill: 'both'
         });
-    document.getElementById('genmid').animate([
+    document.getElementById('anim-sec').animate([
         {
-            transform: 'scale(1, 1.5)',
-            opacity: 1,
+            transform: 'scale(1, 1)',
+            // opacity: 1.0,
+
         },
         {
-            transform: 'scale(1, 0.5)',
-            opacity: 0.8,
+            transform: 'scale(1, 0.0)',
+            // opacity: 1.8,
             // offset: 0.3
         },
         {
             transform: 'scale(1, 1)',
-            opacity: 0.6,
+            // opacity: 0.6,
             // offset: 0.6
         },
         {
-            transform: 'scale(1, 0.5)',
-            opacity: 0.7,
+            transform: 'scale(1, 0)',
+            // opacity: 0.7,
             // offset: 1
         }
     ], {
@@ -93,24 +95,25 @@ anim = () => {
             direction: 'alternate',
             fill: 'both'
         });
-    document.getElementById('genlast').animate([
+    document.getElementById('anim-third').animate([
         {
-            transform: 'scale(1, 1.5)',
-            opacity: 1,
+            transform: 'scale(1, 1)',
+            // opacity: 1.0,
+
         },
         {
-            transform: 'scale(1, 0.5)',
-            opacity: 0.8,
+            transform: 'scale(1, 0.0)',
+            // opacity: 1.8,
             // offset: 0.3
         },
         {
             transform: 'scale(1, 1)',
-            opacity: 0.6,
+            // opacity: 0.6,
             // offset: 0.6
         },
         {
-            transform: 'scale(1, 0.5)',
-            opacity: 0.7,
+            transform: 'scale(1, 0)',
+            // opacity: 0.7,
             // offset: 1
         }
     ], {
@@ -144,7 +147,6 @@ colShaker = () => {
 }
 // function click button
 buttonAction = () => {
-    // document.getElementsByClassName('card-output').style.visibility = 'visible';
     // animation function, slot machine
     anim();
     // generate names with genNames through myFunc
@@ -153,8 +155,5 @@ buttonAction = () => {
     colShaker();
 } // end of button Action
 
-// buttonActionRev = () => {
-//     document.getElementsByClassName('card-output').style.visibility = 'hidden';
-// }
 
 
