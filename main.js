@@ -1,4 +1,19 @@
 // main javascript
+// XMLHttp Request GET
+
+const xhr =  new XMLHttpRequest();
+const url = 'https://api.datamuse.com/endpoint';
+
+xhr.responseType = 'json';
+xhr.onreadystatechange = () => {
+    if(xhr.readyState === XMLHttpRequest.DONE) {
+        // return xhr.response;
+        console.log('I am fine, thank you!')
+    }
+};
+xhr.open('GET', url);
+xhr.send();
+
 // Name lists
 const first = ['blues', 'sugar', 'pepp', 'small', 'big', 'handsome', 'thin'];
 const middle = ['Regular', 'Guitar', 'String', 'Stumpy', 'Drumroll'];
@@ -44,7 +59,7 @@ anim = () => {
 
         },
         {
-            transform: 'scale(1, 0.0)',
+            transform: 'scale(1, 0)',
             // opacity: 1.8,
             // offset: 0.3
         },
