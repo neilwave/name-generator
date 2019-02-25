@@ -14,7 +14,7 @@ xhr.onreadystatechange = () => {
 xhr.open('GET', url);
 xhr.send();
 
-// Name lists
+// Name list
 const first = ['blues', 'sugar', 'pepp', 'small', 'big', 'handsome', 'thin'];
 const middle = ['Regular', 'Guitar', 'String', 'Stumpy', 'Drumroll'];
 const last = ['sue', 'joe', 'bird', 'dan', 'dog', 'eagle', 'cat'];
