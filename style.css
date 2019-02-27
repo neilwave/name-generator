@@ -25,13 +25,19 @@ header {
 }
 .card {
     grid-area: card;
+    margin: auto;
+    padding: 50px;
+    width: 50%;
+    height: 80%;
 }
 /* style for all columns */
 .co-1,
 .co-2,
 .co-3 {
+    min-height: 50px;
     padding: 25px;
     margin: 5px;
+    border: 1px solid gray;
     border-radius: 5px;
 }
 .co-1 {
