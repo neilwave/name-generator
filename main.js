@@ -1,7 +1,6 @@
 // main javascript
-
 // XMLHttp Request GET
-//helper function for XMLHttpRequest
+// helper function for XMLHttpRequest
 const renderResponse = (res) => {
     // Handles if res is falsey
     if (!res) {
@@ -25,10 +24,9 @@ const renderResponse = (res) => {
     let roo = Math.floor(Math.random() * res.length);
     wordListThr = (res[roo].word);
     document.getElementById('genlast').innerHTML = `<h2>${wordListThr}</h2>`;
-} 
-
+}
 // random list for api query ! a separate generator is needed here !
-const ranList = ['beach', 'mountain', 'soup', 'beer', 'tree', 'bike', 'hair','Regular', 'Guitar', 'String', 'Stumpy', 'Drumroll','sue', 'joe', 'bird', 'dan', 'dog', 'eagle', 'cat'];
+const ranList = ['beach', 'mountain', 'soup', 'beer', 'tree', 'bike', 'hair', 'Regular', 'Guitar', 'String', 'Stumpy', 'Drumroll', 'sue', 'joe', 'bird', 'dan', 'dog', 'eagle', 'cat'];
 let randomMyIndex = Math.floor(Math.random() * ranList.length);
 let ranIndie = ranList[randomMyIndex];
 
@@ -157,6 +155,7 @@ colShaker = () => {
     document.getElementById('genfirst').style.background = `rgb(${shaker.r_one},${shaker.g_one},${shaker.b_one})`;
     document.getElementById('genmid').style.background = `rgb(${shaker.r_two},${shaker.g_two},${shaker.b_two})`;
     document.getElementById('genlast').style.background = `rgb(${shaker.r_three},${shaker.g_three},${shaker.b_three})`;
+    document.getElementById('wrap').style.background = `linear-gradient(to bottom left, rgb(${shaker.r_three},${shaker.g_three},${shaker.b_three}),rgb(${shaker.r_two},${shaker.g_two},${shaker.b_two}) )`;
 }
 // function click button
 buttonAction = () => {

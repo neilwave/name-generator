@@ -3,9 +3,6 @@ body {
     color: #fff;
     font-family: sans-serif;
 }
-/* div {
-    border: 1px dashed darkolivegreen;
-} */
 header {
     text-align: center;
     padding-top: 20px;
@@ -15,6 +12,9 @@ header {
     display: grid;
     width: 80%;
     margin: auto;
+    padding: 25px;
+    box-shadow: 0 0 25px 25px gray;
+    border-radius: 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
         "card card card"
@@ -57,9 +57,9 @@ header {
     margin: 50px auto;
 }
 .button:hover {
-    /* border: 2px solid blue; */
     cursor: pointer;
 }
 .button:active {
     border: 2px solid blue;
+    box-shadow: 0 0 25px 25px gray;
 }
