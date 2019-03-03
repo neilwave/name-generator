@@ -10,25 +10,25 @@ const renderResponse = (res) => {
         alert("Try again! There were no suggestions found!");
         return;
     }
-    // Creates an empty object and get filled with one random word
-    let wordList = {};
     // first Name
-    let foo = Math.floor(Math.random() * res.length);
-    wordList = (res[foo].word);
+    let a = Math.floor(Math.random() * res.length);
+    wordList = (res[a].word);
     document.getElementById('genfirst').innerHTML = `<h2>${wordList}</h2>`;
     // second Name
-    let goo = Math.floor(Math.random() * res.length);
-    wordListTwo = (res[goo].word);
-    document.getElementById('genmid').innerHTML = `<h2>${wordListTwo}</h2>`;
+    let b = Math.floor(Math.random() * res.length);
+    wordList = (res[b].word);
+    document.getElementById('genmid').innerHTML = `<h2>${wordList}</h2>`;
     // third Name
-    let roo = Math.floor(Math.random() * res.length);
-    wordListThr = (res[roo].word);
-    document.getElementById('genlast').innerHTML = `<h2>${wordListThr}</h2>`;
-}
+    let c = Math.floor(Math.random() * res.length);
+    wordList = (res[c].word);
+    document.getElementById('genlast').innerHTML = `<h2>${wordList}</h2>`;
+} 
+
 // random list for api query ! a separate generator is needed here !
-const ranList = ['beach', 'mountain', 'soup', 'beer', 'tree', 'bike', 'hair', 'Regular', 'Guitar', 'String', 'Stumpy', 'Drumroll', 'sue', 'joe', 'bird', 'dan', 'dog', 'eagle', 'cat'];
+const ranList = ['beach', 'mountain', 'soup', 'beer', 'tree', 'bike', 'hair', 'blue', 'guitar', 'string', 'weather', 'drum', 'sue', 'joe', 'bird', 'dog', 'eagle', 'cat'];
 let randomMyIndex = Math.floor(Math.random() * ranList.length);
 let ranIndie = ranList[randomMyIndex];
+
 
 // AJAX function
 const xhr = new XMLHttpRequest();
@@ -136,7 +136,7 @@ anim = () => {
             fill: 'both'
         });
 }
-// color shaker version 1.1 Object, colShaker function
+// color shaker version 1.1 object, colShaker function
 const shaker = {
     r_one: '',
     g_one: '',
@@ -158,11 +158,19 @@ colShaker = () => {
     document.getElementById('wrap').style.background = `linear-gradient(to bottom left, rgb(${shaker.r_three},${shaker.g_three},${shaker.b_three}),rgb(${shaker.r_two},${shaker.g_two},${shaker.b_two}) )`;
 }
 // function click button
+async function asyncFunc() {
+    let anime = await anim();
+    let nameGet = await getNames(anime);
+    let colors = await colShaker(nameGet);
+    console.log(colors);
+}
 buttonAction = () => {
-    // animation function, slot machine
-    anim();
-    // generate names with genNames through myFunc
-    getNames();
-    // generate a rgb color for each color
-    colShaker();
+    // // animation function, slot machine
+    // anim();
+    // // generate names with genNames through myFunc
+    // getNames();
+    // // generate a rgb color for each color
+    // colShaker();
+    asyncFunc();
 } // end of button Action
+
