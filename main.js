@@ -165,12 +165,7 @@ async function asyncFunc() {
     console.log(colors);
 }
 buttonAction = () => {
-    // // animation function, slot machine
-    // anim();
-    // // generate names with genNames through myFunc
-    // getNames();
-    // // generate a rgb color for each color
-    // colShaker();
+
     asyncFunc();
 } // end of button Action
 
