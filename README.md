@@ -3,11 +3,11 @@ Random name generator (HTML, CSS, JS)
 
 
 **Function:**
-Click a botton and reveal some random names:
+Click a botton and reveal some random names/words:
 
 
 -----
-To get random names the name-generator uses the http://www.datamuse.com/api/. So any self-written lists are not needed and with this API it's more likely a true random output)
+To get random names the name-generator uses the http://www.datamuse.com/api/. Any self-written lists are not needed and with this API it's more likely a true random output.
 
 -----
 
